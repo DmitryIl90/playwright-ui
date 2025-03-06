@@ -23,13 +23,9 @@ jobs:
 #    - name: Run local html server
 #      run: npm run local
 
-    - name: Run ENV variables tests
-      env:
-        BaseURL: ${{ secrets.BaseURL }}
-      run: |
-        echo "Running ENV variables tests..."
-
     - name: Run Playwright tests
+      env:
+        APPURL: ${{ secrets.APPURL }}
       run: npx playwright test
 
     - uses: actions/upload-artifact@v4

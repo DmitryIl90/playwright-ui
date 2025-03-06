@@ -5,7 +5,7 @@ test.describe("Local simple form tests", async () => {
 
     test.only('Form opens', async ({ page }) => {
         // locators
-        const BaseURL = process.env.BaseURL || "https://fe-delivery.tallinn-learning.ee/";
+        const APPURL = process.env.APPURL || 'https://fe-delivery.tallinn-learning.ee/';
         const loginField = page.getByTestId("username-input");
         const passwordField = page.getByTestId("password-input");
         const signInButton = page.getByTestId("signIn-button");
@@ -17,7 +17,7 @@ test.describe("Local simple form tests", async () => {
         const randomPassword = faker.internet.password({length: 10})
 
         // actions
-        await page.goto(BaseURL);
+        await page.goto(APPURL);
         await expect(loginField).toBeVisible();
         await expect(passwordField).toBeVisible();
         await expect(signInButton).toBeVisible();

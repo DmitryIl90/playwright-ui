@@ -20,6 +20,9 @@ jobs:
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
 
+    - name: Run local html server
+      run: npm run local
+
     - name: Run Playwright tests
       run: npx playwright test
 

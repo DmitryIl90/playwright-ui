@@ -1,14 +1,17 @@
 {
   "name": "playwright-ui",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "local": "serve ./src/simpleForm.html"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "devDependencies": {
     "@playwright/test": "^1.50.1",
-    "@types/node": "^22.13.9"
+    "@types/node": "^22.13.9",
+    "serve": "^14.2.4"
   }
 }

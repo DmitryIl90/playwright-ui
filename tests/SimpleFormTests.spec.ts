@@ -3,7 +3,7 @@ import {faker} from "@faker-js/faker/locale/ar";
 
 test.describe("Local simple form tests", async () => {
 
-    test.only('Form opens', async ({ page }) => {
+    test('Form opens', async ({ page }) => {
         // locators
         const APPURL = process.env.APPURL || 'https://fe-delivery.tallinn-learning.ee/';
         const loginField = page.getByTestId("username-input");

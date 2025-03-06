@@ -5,7 +5,7 @@ test.describe("Local simple form tests", async () => {
 
     test.only('Form opens', async ({ page }) => {
         // locators
-        const BaseURL = process.env.BaseURL || "https://fe-delivery.tallinn-learning.ee/";;
+        const BaseURL = process.env.BaseURL || "https://fe-delivery.tallinn-learning.ee/";
         const loginField = page.getByTestId("username-input");
         const passwordField = page.getByTestId("password-input");
         const signInButton = page.getByTestId("signIn-button");

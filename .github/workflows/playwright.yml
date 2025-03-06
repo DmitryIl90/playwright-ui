@@ -23,6 +23,12 @@ jobs:
 #    - name: Run local html server
 #      run: npm run local
 
+    - name: Run ENV variables tests
+      env:
+        BaseURL: ${{ secrets.BaseURL }}
+      run: |
+        echo "Running ENV variables tests..."
+
     - name: Run Playwright tests
       run: npx playwright test
 

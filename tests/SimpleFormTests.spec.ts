@@ -14,7 +14,7 @@ test.describe("Local simple form tests", async () => {
         const popupMessage = page.getByTestId("authorizationError-popup");
         const popupCloseButton = page.getByTestId("authorizationError-popup-close-button");
         const randomUsername = faker.internet.username();
-        const randomPassword = faker.internet.password({length: 10})
+        const randomPassword = faker.internet.password({length: 10});
 
         // actions
         await page.goto(APPURL);

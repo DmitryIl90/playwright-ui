@@ -4,8 +4,7 @@ import {faker} from "@faker-js/faker/locale/ar";
 test.describe("Local simple form tests", async () => {
 
     test('Negative tests for authorization', async ({ page }) => {
-        // locators
-        const APPURL = process.env.APPURL || 'https://fe-delivery.tallinn-learning.ee/';
+        // locators;
         const loginField = page.getByTestId("username-input");
         const passwordField = page.getByTestId("password-input");
         const signInButton = page.getByTestId("signIn-button");
@@ -17,7 +16,7 @@ test.describe("Local simple form tests", async () => {
         const randomPassword = faker.internet.password({length: 10});
 
         // actions
-        await page.goto(APPURL);
+        await page.goto('/');
         await expect(loginField).toBeVisible();
         await expect(passwordField).toBeVisible();
         await expect(signInButton).toBeVisible();

@@ -16,7 +16,7 @@ test.describe("Local simple form tests", async () => {
         const randomPassword = faker.internet.password({length: 10});
 
         // actions
-        await page.goto('/');
+        await page.goto(process.env.APP_URL);
         await expect(loginField).toBeVisible();
         await expect(passwordField).toBeVisible();
         await expect(signInButton).toBeVisible();

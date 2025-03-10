@@ -4,6 +4,7 @@ on:
     branches: [ main, master ]
   pull_request:
     branches: [ main, master ]
+
 jobs:
   test:
     timeout-minutes: 60
@@ -20,8 +21,13 @@ jobs:
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
 
+#    - name: Run local html server
+#      run: npm run local
+
     - name: Run Playwright tests
       run: npx playwright test
+      env:
+        APP_URL: ${{ secrets.APP_URL }}
 
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
